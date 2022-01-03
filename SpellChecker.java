@@ -11,19 +11,18 @@ public class SpellChecker
       // WRITE Your Methods HERE!
       public void print10()
       {
-        for(int i =0; i<10;i++)
+        for(int i =0; i<=10;i++)
         {
           System.out.println(dictionary[i]);
         }
       }
-
       public boolean spellcheck(String word)
     {
       boolean correctSpelling = false;
 
       for ( int i =0; i < dictionary.length; i++)
       {
-        if (word.equals(dictionary[i]))
+        if (word.equalsIgnoreCase(dictionary[i]))
         {
             correctSpelling = true;
         }
@@ -34,18 +33,22 @@ public class SpellChecker
       }   
     return correctSpelling;
     }
-
     public void printStartsWith(String letter)
     {
       for ( int i =0; i < dictionary.length; i++)
       {
-        if (letter.equals(dictionary[i]))
+        if (letter.startsWith(dictionary[i]))
         {
           System.out.println(letter);
         }
       }
       
     }
+    
+
+
+
+
 
       public SpellChecker() {
         try
